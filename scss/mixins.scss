@@ -1,0 +1,13 @@
+@mixin lexend {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+@mixin roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
