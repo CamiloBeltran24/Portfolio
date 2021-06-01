@@ -17,9 +17,10 @@ header{
   height: 100vh;
   background-image: url('../assets/img/background-header-600.jpg');
   // @include centrado;
-  background-position: top center;
+  background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment:scroll;
   .header__nav{
     position: absolute;
     display: flex;
@@ -69,12 +70,30 @@ header{
       justify-content: space-evenly;
       align-items: center;
       width: 100%;
+      padding-bottom: 20px;
       font-size: 1.6rem;
       font-weight: 700;
-      border: 1px solid black;
+      color:$white;
+      background-color: #222831f5;
+      // z-index: 100;
+      .close--container{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 2.5rem;
+        color: $white;
+        .close{
+          position: absolute;
+          top:5px;
+          right: 20px;
+        }
+      }
       li{
         list-style: none;
-        padding: 5px;
+        padding: 10px;
+        font-size: 1.8rem;
+        border-bottom: 1px solid $white;
         a{
           display: inline-block;
           text-decoration: none;
@@ -114,10 +133,7 @@ header{
       text-align: center;
       // border: 1px solid white;
       h2{
-        @include lexend;
-        font-size: 2.9rem;
-        font-weight: 400;
-        color: $soft-blue;
+        @include titles;
       }
       p{
         @include lexend;
@@ -129,6 +145,202 @@ header{
   }
 }
 
+main{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 30px;
+  background-color: $white;
+  .main--title{
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    h2{
+      @include titles;
+      @include lexend;
+      font-weight: 700;
+    }
+    hr{
+      width: 170px;
+      margin: auto;
+      margin-top: 12px;
+      border: 3px solid $soft-blue;
+      border-radius: 5rem;
+      // color:$soft-blue
+    }
+  }
+  .main--content{
+    position: relative;
+    display: block;
+    width: 100%;
+    // height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include roboto;
+    // border-bottom: 1px solid $text-gray;
+    .whois{
+      width: 100%;
+      // height: 100%;
+      padding:10px; 
+      color: $text-gray;
+      margin-bottom: 5px;
+      @include roboto;
+      .whois--question{
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-decoration: underline;
+        letter-spacing: 1px;
+      }
+      h2{
+        margin-top: 18px;
+        padding: 5px;
+        font-size:1.8rem;
+        font-weight: 900;
+        text-align: center;
+        line-height: 22px;
+        // text-align:left;
+      }
+      p:last-child{
+        margin-top: 12px;
+        padding: 10px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-align:left;
+        line-height: 20px;
+      }
+    }
+    .skills{
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 10px;
+      @include roboto;
+      color: $text-gray;
+      .skills--title{
+        position: relative;
+        display: block;
+        width: 100%;
+        padding:5px 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-decoration: underline;
+        letter-spacing: 1px;
+      }
+      .skills__item{
+        position: relative;
+        width: 30%;
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 2rem;
+        text-align: center;
+        color: $white;
+        background-color:#393e46c2;
+        border-radius: 5px;
+        i{
+          font-size: 6rem;
+        }
+      }
+    }
+  }
+}
+.projects{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 25px;
+  background-color: rgb(209, 209, 209);
+  // background-color: #393e4641;
+  .projects__title{
+    @include lexend;
+    h2{
+      @include titles;
+      font-weight: 700;
+      // text-align: center;
+    }
+    hr{
+      width: 170px;
+      margin: auto;
+      margin-top: 12px;
+      border: 3px solid $soft-blue;
+      border-radius: 5rem;
+      margin-bottom: 25px;
+    }
+  }
+  .project.google{
+    background-image: url('../assets/img/google_clone.png');
+  }
+  .project.duck{
+    background-image: url('../assets/img/DuckDuckGo_clone.png');
+  }
+  .project{
+    position: relative;
+    width: 80%;
+    height: 300px;
+    margin-bottom: 15px;
+    color: $white;
+    border: 1px solid gray;
+    border-radius:5px;
+    background-position: center;
+    background-size: cover;
+    .info{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      background-color: #222831d7;
+      text-align: center;
+      border-radius:5px;
+      h2{
+        color: $soft-blue;
+        font-size: 2.5rem;   
+        text-decoration: underline;
+        font-weight: 700;
+        @include lexend;
+        line-height: 25px;
+        letter-spacing: 1px;
+      }
+      p{
+        font-size: 1.8rem;
+        color: $white;
+        @include lexend;
+      }
+      a{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 70%;
+        padding: 15px;
+        @include lexend;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        text-decoration: none;
+        background-color: $dark-blue;
+        color: $white;
+        span{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+footer{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background-color: $dark-blue;
+  color: $white;
+}
 // Dispostivos Small (iphone 6/7/8/SE2020)
 @media (min-width:370px) {
   header{
