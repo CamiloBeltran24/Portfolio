@@ -278,6 +278,11 @@ main{
   .project.duck{
     background-image: url('../assets/img/DuckDuckGo_clone.png');
   }
+  .project.brands{
+    background-image: url('../assets/img/brands.png');
+    // background-position: top left;
+    // background-size: contain;
+  }
   .project{
     position: relative;
     width: 80%;
@@ -288,6 +293,8 @@ main{
     border-radius:5px;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid #222831d7;
     .info{
       position: relative;
       display: flex;

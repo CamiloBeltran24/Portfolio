@@ -276,6 +276,9 @@ main .main--content .skills .skills__item i {
 .projects .project.duck {
   background-image: url("../assets/img/DuckDuckGo_clone.png");
 }
+.projects .project.brands {
+  background-image: url("../assets/img/brands.png");
+}
 .projects .project {
   position: relative;
   width: 80%;
@@ -286,6 +289,8 @@ main .main--content .skills .skills__item i {
   border-radius: 5px;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #222831d7;
 }
 .projects .project .info {
   position: relative;
