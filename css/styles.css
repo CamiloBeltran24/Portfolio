@@ -292,10 +292,14 @@ main .main--content .skills .skills__item i {
   background-image: url("../assets/img/DuckDuckGo_clone.png");
 }
 .projects .project.brands {
-  background-image: url("../assets/img/brands.png");
+  background-image: url("../assets/img/projects_preview/brands_preview.png");
 }
 .projects .project.faq {
   background-image: url("../assets/img/faq_accordion_card.png");
+}
+.projects .project.article {
+  background-image: url("../assets/img/projects_preview/article-preview-component.png");
+  background-size: contain;
 }
 .projects .project {
   position: relative;

@@ -291,12 +291,16 @@ main{
     background-image: url('../assets/img/DuckDuckGo_clone.png');
   }
   .project.brands{
-    background-image: url('../assets/img/brands.png');
+    background-image: url('../assets/img/projects_preview/brands_preview.png');
     // background-position: top left;
     // background-size: contain;
   }
   .project.faq{
     background-image: url('../assets/img/faq_accordion_card.png');
+  }
+  .project.article{
+    background-image: url('../assets/img/projects_preview/article-preview-component.png');
+    background-size: contain;
   }
   .project{
     position: relative;
