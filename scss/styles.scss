@@ -70,6 +70,7 @@ header{
       justify-content: space-evenly;
       align-items: center;
       width: 100%;
+      height: 100vh;
       padding-bottom: 20px;
       font-size: 1.6rem;
       font-weight: 700;
@@ -80,23 +81,34 @@ header{
         position: relative;
         display: block;
         width: 100%;
-        height: 100%;
-        font-size: 2.5rem;
+        height: 10%;
+        font-size: 2.6rem;
         color: $white;
         .close{
           position: absolute;
-          top:5px;
-          right: 20px;
+          top:10px;
+          right: 25px;
         }
       }
-      li{
-        list-style: none;
-        padding: 10px;
-        font-size: 1.8rem;
-        border-bottom: 1px solid $white;
-        a{
-          display: inline-block;
-          text-decoration: none;
+      ul{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        li{
+          width: 50%;
+          margin: auto;
+          padding:25px;
+          list-style: none;
+          border-bottom: 1px solid $white;
+          a{
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            @include roboto;
+            font-size: 3.2rem;
+            font-weight: 400;
+            color: $white;
+          }
         }
       }
     }
@@ -110,8 +122,8 @@ header{
     figure{
       position: relative;
       display: block;
-      width: 250px;
-      height: 250px;
+      width: 220px;
+      height: 220px;
       margin: auto;
       img{
         width: 100%;
@@ -283,6 +295,9 @@ main{
     // background-position: top left;
     // background-size: contain;
   }
+  .project.faq{
+    background-image: url('../assets/img/faq_accordion_card.png');
+  }
   .project{
     position: relative;
     width: 80%;
@@ -326,13 +341,14 @@ main{
         justify-content: space-evenly;
         align-items: center;
         width: 70%;
-        padding: 15px;
+        padding: 12px;
         @include lexend;
         font-size: 1.8rem;
         letter-spacing: 1px;
         text-decoration: none;
         background-color: $dark-blue;
         color: $white;
+        border-radius: 5px;
         span{
           text-decoration: underline;
         }
@@ -344,9 +360,62 @@ footer{
   position: relative;
   display: block;
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   background-color: $dark-blue;
   color: $white;
+  text-align: center;
+  h2{
+    margin-top: 10px;
+    @include titles;
+    // color: $;
+    font-weight: 700;
+    text-shadow: 0px 0px 40px $white;
+  }
+  hr{
+    width: 170px;
+    margin: auto;
+    margin-top: 7px;
+    margin-bottom: 25px;
+    border: 3px solid $soft-blue;
+    border-radius: 5rem;
+    // box-shadow: 2px 2px 4px $white;
+  }
+  p.footer-text{
+    @include roboto;
+    padding: 12px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: $white;
+  }
+  .social_networks{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
+    a{
+      padding: 15px;
+      font-size: 3.5rem;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  .copyrigth{
+    width: 100%;
+    padding:0 15px;
+    p{
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      @include roboto;
+      a{
+        text-decoration: none;
+        color: $soft-blue;
+      }
+    }
+  }
 }
 // Dispostivos Small (iphone 6/7/8/SE2020)
 @media (min-width:370px) {
