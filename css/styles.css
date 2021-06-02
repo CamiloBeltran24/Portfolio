@@ -146,7 +146,7 @@ header .header__intro .header__intro--text h2 {
   font-size: 2.9rem;
   font-weight: 400;
   color: #00adb5;
-  text-shadow: 3px 3px 11px #393e46;
+  text-shadow: 2px 2px 40px #393e46;
 }
 header .header__intro .header__intro--text p {
   font-family: "Lexend Deca", sans-serif;
@@ -173,7 +173,7 @@ main .main--title h2 {
   font-size: 2.9rem;
   font-weight: 400;
   color: #00adb5;
-  text-shadow: 3px 3px 11px #393e46;
+  text-shadow: 2px 2px 40px #393e46;
   font-family: "Lexend Deca", sans-serif;
   font-weight: 700;
 }
@@ -274,7 +274,7 @@ main .main--content .skills .skills__item i {
   font-size: 2.9rem;
   font-weight: 400;
   color: #00adb5;
-  text-shadow: 3px 3px 11px #393e46;
+  text-shadow: 2px 2px 40px #393e46;
   font-weight: 700;
 }
 .projects .projects__title hr {
@@ -370,9 +370,9 @@ footer h2 {
   font-size: 2.9rem;
   font-weight: 400;
   color: #00adb5;
-  text-shadow: 3px 3px 11px #393e46;
+  text-shadow: 2px 2px 40px #393e46;
   font-weight: 700;
-  text-shadow: 5px 5px 40px #eee;
+  text-shadow: 5px 5px 20px #eee;
 }
 footer hr {
   width: 170px;
