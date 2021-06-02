@@ -285,10 +285,10 @@ main{
     }
   }
   .project.google{
-    background-image: url('../assets/img/google_clone.png');
+    background-image: url('../assets/img/projects_preview/google_clone.png');
   }
   .project.duck{
-    background-image: url('../assets/img/DuckDuckGo_clone.png');
+    background-image: url('../assets/img/projects_preview/DuckDuckGo_clone.png');
   }
   .project.brands{
     background-image: url('../assets/img/projects_preview/brands_preview.png');
@@ -298,9 +298,12 @@ main{
   .project.faq{
     background-image: url('../assets/img/faq_accordion_card.png');
   }
+  .project.fylo{
+    background-image: url('../assets/img/projects_preview/fylo-data-storage-component.png');
+  }
   .project.article{
-    background-image: url('../assets/img/projects_preview/article-preview-component.png');
-    background-size: contain;
+    background-image: url('../assets/img/projects_preview/article_preview.png');
+    // background-size: contain;
   }
   .project{
     position: relative;

@@ -286,10 +286,10 @@ main .main--content .skills .skills__item i {
   margin-bottom: 25px;
 }
 .projects .project.google {
-  background-image: url("../assets/img/google_clone.png");
+  background-image: url("../assets/img/projects_preview/google_clone.png");
 }
 .projects .project.duck {
-  background-image: url("../assets/img/DuckDuckGo_clone.png");
+  background-image: url("../assets/img/projects_preview/DuckDuckGo_clone.png");
 }
 .projects .project.brands {
   background-image: url("../assets/img/projects_preview/brands_preview.png");
@@ -297,9 +297,11 @@ main .main--content .skills .skills__item i {
 .projects .project.faq {
   background-image: url("../assets/img/faq_accordion_card.png");
 }
+.projects .project.fylo {
+  background-image: url("../assets/img/projects_preview/fylo-data-storage-component.png");
+}
 .projects .project.article {
-  background-image: url("../assets/img/projects_preview/article-preview-component.png");
-  background-size: contain;
+  background-image: url("../assets/img/projects_preview/article_preview.png");
 }
 .projects .project {
   position: relative;
