@@ -1,9 +1,9 @@
 @mixin lexend {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 @mixin roboto {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @mixin centrado {
@@ -14,7 +14,6 @@
 @mixin titles {
   @include lexend;
   font-size: 2.9rem;
-  font-weight: 400;
+  font-weight: 700;
   color: $soft-blue;
-  text-shadow: 2px 2px 40px $text-gray;
 }

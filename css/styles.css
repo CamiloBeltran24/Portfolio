@@ -8,6 +8,11 @@ html {
   font-size: 62.5%;
 }
 
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -60,10 +65,15 @@ header .header__nav .burguer_icon {
   color: #eee;
   margin-right: 15px;
 }
+header .header__nav .header__nav--menu.active {
+  left: 0;
+}
+header .header__nav .header__nav--menu.hidde {
+  left: 100%;
+}
 header .header__nav .header__nav--menu {
   position: absolute;
   top: 0;
-  left: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -74,7 +84,8 @@ header .header__nav .header__nav--menu {
   font-size: 1.6rem;
   font-weight: 700;
   color: #eee;
-  background-color: #222831f5;
+  background-color: #222831;
+  transition: all 0.5s ease-in-out;
 }
 header .header__nav .header__nav--menu .close--container {
   position: relative;
@@ -99,7 +110,7 @@ header .header__nav .header__nav--menu ul li {
   margin: auto;
   padding: 25px;
   list-style: none;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #00adb5;
 }
 header .header__nav .header__nav--menu ul li a {
   display: inline-block;
@@ -144,9 +155,8 @@ header .header__intro .header__intro--text {
 header .header__intro .header__intro--text h2 {
   font-family: "Lexend Deca", sans-serif;
   font-size: 2.9rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #00adb5;
-  text-shadow: 2px 2px 40px #393e46;
 }
 header .header__intro .header__intro--text p {
   font-family: "Lexend Deca", sans-serif;
@@ -171,9 +181,8 @@ main .main--title {
 main .main--title h2 {
   font-family: "Lexend Deca", sans-serif;
   font-size: 2.9rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #00adb5;
-  text-shadow: 2px 2px 40px #393e46;
   font-family: "Lexend Deca", sans-serif;
   font-weight: 700;
 }
@@ -221,6 +230,10 @@ main .main--content .whois p:last-child {
   text-align: left;
   line-height: 20px;
 }
+main .main--content .whois p:last-child a {
+  color: #0077b5;
+  font-weight: 700;
+}
 main .main--content .skills {
   position: relative;
   display: flex;
@@ -238,7 +251,7 @@ main .main--content .skills .skills--title {
   width: 100%;
   padding: 5px 0;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: underline;
   letter-spacing: 1px;
 }
@@ -252,6 +265,7 @@ main .main--content .skills .skills__item {
   color: #eee;
   background-color: #393e46c2;
   border-radius: 5px;
+  border-bottom: 6px solid #222831;
 }
 main .main--content .skills .skills__item i {
   font-size: 6rem;
@@ -272,9 +286,8 @@ main .main--content .skills .skills__item i {
 .projects .projects__title h2 {
   font-family: "Lexend Deca", sans-serif;
   font-size: 2.9rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #00adb5;
-  text-shadow: 2px 2px 40px #393e46;
   font-weight: 700;
 }
 .projects .projects__title hr {
@@ -374,11 +387,9 @@ footer h2 {
   margin-top: 10px;
   font-family: "Lexend Deca", sans-serif;
   font-size: 2.9rem;
-  font-weight: 400;
-  color: #00adb5;
-  text-shadow: 2px 2px 40px #393e46;
   font-weight: 700;
-  text-shadow: 5px 5px 20px #eee;
+  color: #00adb5;
+  font-weight: 700;
 }
 footer hr {
   width: 170px;
