@@ -265,7 +265,7 @@ main .main--content .skills .skills__item {
   color: #eee;
   background-color: #393e46c2;
   border-radius: 5px;
-  border-bottom: 6px solid #222831;
+  border-bottom: 3px solid #00adb5;
 }
 main .main--content .skills .skills__item i {
   font-size: 6rem;
