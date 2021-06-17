@@ -3,7 +3,44 @@
     .header__nav {
       .header__nav--nickname {
         p {
-          font-size: 2.8rem;
+          font-size: 2rem;
+        }
+      }
+      .burguer_icon {
+        display: none;
+      }
+      .header__nav--menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+        top: 0;
+        left: 65%;
+        max-width: 280px;
+        height: 100%;
+        padding: 0;
+        background: none;
+        .close--container {
+          display: none;
+        }
+        ul {
+          display: flex;
+          width: 100%;
+          height: 30px;
+          li {
+            width: 80px;
+            height: 100%;
+            padding: 0;
+            border: none;
+            &:hover {
+              border-bottom: 1px solid $soft-blue;
+            }
+            a {
+              width: 100%;
+              height: 100%;
+              padding: 0;
+              font-size: 1.6rem;
+              line-height: 31px;
+            }
+          }
         }
       }
     }
@@ -36,6 +73,7 @@
     }
   }
   main {
+    background-color: #fff;
     .main--content {
       position: relative;
       display: flex;
@@ -77,18 +115,42 @@
   .projects {
     display: flex;
     flex-wrap: wrap;
+    // flex-direction: row;
     padding: 25px 100px;
+    background-color: $white;
     .project__title {
       min-width: 100%;
     }
     .project {
+      position: relative;
       width: 210px;
       height: 210px;
+      border: 1px solid $white;
+      background-size: cover;
+      cursor: pointer;
+      .info {
+        // position: absolute;
+        // bottom: -100%;
+        h2 {
+          font-size: 1.8rem;
+        }
+        a {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
   footer {
+    .footer-text {
+      // display: inline-block;
+      width: 350px;
+      margin: 0 auto;
+    }
     .social-networks {
+      // display: inline-block;
       width: 320px;
+      // margin: 0;
+
       .fab {
         padding: 5px;
         border-radius: 5px;
