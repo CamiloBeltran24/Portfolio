@@ -61,21 +61,50 @@
         justify-content: space-evenly;
         width: 50%;
         .skills__item {
-          width: 60px;
-          height: 60px;
+          width: 70px;
+          height: 70px;
           float: left;
           i {
-            font-size: 3rem;
+            font-size: 4rem;
           }
           p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
       }
     }
   }
   .projects {
-    padding: 25px 20px;
-    overflow-x: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 100px;
+    .project__title {
+      min-width: 100%;
+    }
+    .project {
+      width: 210px;
+      height: 210px;
+    }
+  }
+  footer {
+    .social-networks {
+      width: 320px;
+      .fab {
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .fa-linkedin-in:hover {
+        background-color: #0077b5;
+      }
+      .fa-github:hover {
+        background-color: #333;
+      }
+      .fa-twitter:hover {
+        background-color: #1da1f2;
+      }
+      .fa-instagram:hover {
+        background-color: #405de6;
+      }
+    }
   }
 }
