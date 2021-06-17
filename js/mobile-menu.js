@@ -19,5 +19,3 @@ function oculta_menu(e) {
 
 burguer_menu.addEventListener("click", muestra_menu);
 closer.addEventListener("click", oculta_menu);
-
-menu_list.addEventListener("click", desplazar_menu);
