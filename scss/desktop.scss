@@ -1,0 +1,81 @@
+@media (min-width: 1024px) {
+  header {
+    .header__nav {
+      .header__nav--nickname {
+        p {
+          font-size: 2.8rem;
+        }
+      }
+    }
+    .header__intro {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding-top: 0;
+      justify-content: center;
+      .header__intro--text {
+        width: 400px;
+        max-width: 600px;
+        margin: 0;
+        padding: 0;
+        h2 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 3rem;
+        }
+      }
+      figure {
+        margin: 0;
+        width: 230px;
+        height: 230px;
+        img {
+          box-shadow: 0 0 8px 8px $dark-blue;
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
+  main {
+    .main--content {
+      position: relative;
+      display: flex;
+      // flex-wrap: wrap;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      .whois {
+        width: 60%;
+        height: 100%;
+      }
+      .skills-container {
+        width: 40%;
+        padding: 10px;
+        display: flex;
+      }
+      .skills {
+        position: relative;
+        // display: flex;
+        // display: inline-block;
+        // flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50%;
+        .skills__item {
+          width: 60px;
+          height: 60px;
+          float: left;
+          i {
+            font-size: 3rem;
+          }
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+  .projects {
+    padding: 25px 20px;
+    overflow-x: scroll;
+  }
+}
