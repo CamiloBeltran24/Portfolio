@@ -1,0 +1,238 @@
+@use "../abstracts/variables";
+
+.section {
+    padding: 48px 0;
+
+    .projects__cards {
+        display: grid;
+        gap: 32px;
+        padding-top: 32px;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+
+        .card {
+            border-radius: 12px;
+            border: 1px solid variables.$quaternary-color;
+            background: variables.$tertiary-color;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            .card__techs {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 12px 0 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+
+                .tech {
+                    background-color: rgba(variables.$tertiary-color, 0.9);
+                    border: 1px solid variables.$quaternary-color;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    font-size: 12px;
+                }
+            }
+
+            .card__img {
+                height: 200px;
+                object-fit: cover;
+                width: 100%;
+            }
+
+            .card__content {
+                padding: 20px;
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .card__title {
+                position: relative;
+
+                &::after {
+                    content: url('../IMG/svg/open-project.svg');
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .card__buttons {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-top: 20px;
+
+                .btn-linear {
+                    display: inline;
+                    text-decoration: none;
+                    background: unset;
+                    font-size: 14px;
+                    line-height: 20px;
+
+                    &.primary {
+                        color: variables.$primary-color;
+                    }
+
+                    &.secondary {
+                        color: variables.$text-color;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    &.expertise {
+        .expertise__grid {
+            display: grid;
+            gap: 24px;
+            padding-top: 32px;
+
+            @media screen and (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media screen and (min-width: 1024px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .skill {
+            border-radius: 12px;
+            border: 1px solid variables.$quaternary-color;
+            background: variables.$tertiary-color;
+            padding: 20px;
+
+
+            .skill__icon {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+                background: variables.$tertiary-color;
+                margin-bottom: 16px;
+            }
+
+            .skill__name {
+                margin-bottom: 8px;
+                color: variables.$white;
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            .skill__info {
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &.experience {
+
+        .timeline {
+            position: relative;
+            margin-top: 32px;
+            display: grid;
+            gap: 32px;
+            // border-left: 1px solid variables.$quaternary-color;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0px;
+                width: 2px;
+                height: 100%;
+                background-color: variables.$quaternary-color;
+            }
+
+            @media screen and (min-width: 768px) {
+                max-width: 80%;
+                margin-inline: auto;
+            }
+
+
+            .timeline__item {
+                position: relative;
+                padding-left: 40px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: -7px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background-color: variables.$tertiary-color;
+                    border: 1px solid variables.$quaternary-color;
+                }
+
+
+                .timeline__date {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: variables.$text-color;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                    // text-transform: uppercase;
+                }
+
+                .timeline__title {
+                    margin-bottom: 8px;
+                }
+
+                .timeline__company {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: variables.$text-color;
+                    margin-bottom: 14px;
+                }
+
+                .timeline__description {
+                    font-size: 15px;
+                    line-height: 24px;
+                    color: variables.$text-color;
+                    margin-bottom: 12px;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                &.current {
+                    &::before {
+                        background-color: variables.$primary-color;
+                        border-color: variables.$primary-color;
+                    }
+
+                    .timeline__date {
+                        color: variables.$primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+}

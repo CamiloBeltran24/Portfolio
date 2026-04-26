@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/sass/styles.scss:assets/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamiloBeltran24/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CamiloBeltran24/Portfolio/issues"
+  },
+  "homepage": "https://github.com/CamiloBeltran24/Portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

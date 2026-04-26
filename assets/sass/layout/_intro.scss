@@ -1,0 +1,114 @@
+@use "../abstracts/variables";
+
+.intro {
+    padding: 48px 0;
+    border-bottom: 1px solid variables.$quaternary-color;
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap-reverse;
+    }
+
+    &__status {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid variables.$primary-color;
+        border-radius: 16px;
+        padding: 4px 12px 4px 28px;
+        background-color: rgba(variables.$primary-color, 0.1);
+
+        &--available {
+            color: variables.$primary-color;
+            font-weight: 400;
+            font-size: 12px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -16px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: variables.$primary-color;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__img {
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1E8DF6;
+            background: -webkit-linear-gradient(46deg, rgba(30, 141, 246, 0.25) 0%, rgba(30, 141, 246, 0) 100%);
+            background: -moz-linear-gradient(46deg, rgba(30, 141, 246, 0.25) 0%, rgba(30, 141, 246, 0) 100%);
+            background: linear-gradient(46deg, rgba(30, 141, 246, 0.25) 0%, rgba(30, 141, 246, 0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1E8DF6", endColorstr="#1E8DF6", GradientType=0);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 16px;
+        margin: 24px 0;
+    }
+
+    &__skills {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-weight: 400;
+        font-size: 12px;
+
+        span {
+            display: inline-block;
+            padding: 8px 16px 8px 40px;
+            text-transform: capitalize;
+            border: 1px solid variables.$quaternary-color;
+            border-radius: 20px;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                width: 15px;
+                height: 15px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                transform: translateY(-50%);
+            }
+
+            &.language {
+                &::after {
+                    background-image: url('../IMG/svg/language.svg');
+                    width: 17px;
+                }
+            }
+
+            &.experience {
+                &::after {
+                    background-image: url('../IMG/svg/time.svg');
+                }
+            }
+        }
+    }
+}
