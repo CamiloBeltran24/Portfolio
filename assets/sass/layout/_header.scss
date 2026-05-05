@@ -1,12 +1,13 @@
 @use "../abstracts/variables";
 
 .header {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
     border-bottom: 1px solid variables.$tertiary-color;
+    background-color: variables.$background-body-color;
 
     .container {
         padding: 0 16px 0 2px;

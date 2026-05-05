@@ -6,11 +6,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: variables.$primary-font;
     background-color: variables.$background-body-color;
     color: variables.$text-color;
-    padding-top: 60px;
+    // padding-top: 60px;
 }
 
 img {
@@ -53,7 +57,8 @@ a {
     // line-height: 24px;
 }
 
-.btn-primary {
+.btn-primary,
+button {
     background-color: variables.$primary-color;
     border: 1px solid variables.$primary-color;
     padding: 12px 46px 12px 24px;

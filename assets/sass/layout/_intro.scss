@@ -64,6 +64,11 @@
         display: flex;
         gap: 16px;
         margin: 24px 0;
+
+        a {
+            text-decoration: none;
+
+        }
     }
 
     &__skills {

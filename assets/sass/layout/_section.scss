@@ -1,7 +1,7 @@
 @use "../abstracts/variables";
 
 .section {
-    padding: 48px 0;
+    padding: 48px 0 0;
 
     .projects__cards {
         display: grid;
@@ -102,7 +102,7 @@
     &.expertise {
         .expertise__grid {
             display: grid;
-            gap: 24px;
+            gap: 32px;
             padding-top: 32px;
 
             @media screen and (min-width: 768px) {
@@ -149,6 +149,8 @@
     }
 
     &.experience {
+        margin-bottom: 0px;
+        padding-bottom: 0;
 
         .timeline {
             position: relative;
@@ -160,7 +162,7 @@
             &::before {
                 content: '';
                 position: absolute;
-                top: 0;
+                top: 3px;
                 left: 0px;
                 width: 2px;
                 height: 100%;
@@ -181,12 +183,12 @@
                     content: '';
                     position: absolute;
                     top: 3px;
-                    left: -7px;
+                    left: -8px;
                     width: 14px;
                     height: 14px;
                     border-radius: 50%;
                     background-color: variables.$tertiary-color;
-                    border: 1px solid variables.$quaternary-color;
+                    border: 2px solid variables.$quaternary-color;
                 }
 
 
@@ -223,7 +225,7 @@
 
                 &.current {
                     &::before {
-                        background-color: variables.$primary-color;
+                        // background-color: variables.$primary-color;
                         border-color: variables.$primary-color;
                     }
 
@@ -233,6 +235,200 @@
                 }
             }
         }
+    }
+
+    &.certifications {
+        padding-bottom: 0;
+
+        .title {
+            margin-bottom: 24px;
+        }
+
+        .certificate {
+            padding: 25px;
+            position: relative;
+            border: 1px solid variables.$quaternary-color;
+            background-color: variables.$tertiary-color;
+            border-radius: 12px;
+
+            &__title {
+                padding-right: 25%;
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+
+            &__date {
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                color: variables.$primary-color;
+                border: 1px solid variables.$primary-color;
+                border-radius: 13px;
+                padding: 4px 10px;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            &__company {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            &__description {
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 13px;
+            }
+
+            .btn-linear {
+                color: variables.$primary-color;
+                font-size: 12px;
+                letter-spacing: 0.6px;
+                font-weight: 700;
+                position: relative;
+
+                &::after {
+                    content: url('../IMG/svg/certificate.svg');
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -20px;
+
+                }
+            }
+        }
+    }
+
+    &.contact {
+
+        .title {
+            padding-right: 25%;
+        }
+
+        .contact__buttons {
+            margin: 32px 0;
+        }
+
+        .contact__btn {
+            display: block;
+            width: 100%;
+            border: 1px solid variables.$quaternary-color;
+            border-radius: 8px;
+            background: variables.$tertiary-color;
+            padding: 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+
+            span {
+                display: block
+            }
+
+            img {
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+                max-width: 48px;
+                max-height: 48px;
+                object-fit: contain;
+            }
+
+            .contact__label {
+                font-size: 12px;
+                font-weight: 700;
+                color: variables.$text-color;
+                letter-spacing: 0.6px;
+                margin-bottom: 5px;
+                // line-height: 16px;
+            }
+
+            .contact__value {
+                font-size: 18px;
+                color: variables.$white;
+            }
+        }
+
+        form {
+            padding: 24px 24px 40px;
+            border-radius: 24px;
+            border: 2px solid variables.$quaternary-color;
+
+            .title {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 8px;
+                margin-top: 0;
+            }
+
+            fieldset {
+                display: block;
+                position: relative;
+                border: none;
+                margin: 16px 0;
+
+                label {
+                    color: rgba(variables.$text-color, 0.5);
+                    font-size: 16px;
+                    font-weight: 700;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 16px;
+                    text-transform: uppercase;
+                }
+
+                input,
+                textarea {
+                    display: block;
+                    width: 100%;
+                    padding: 16px;
+                    background-color: variables.$tertiary-color;
+                    border: 1px solid variables.$quaternary-color;
+                    border-radius: 12px;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+
+                &:has(textarea) {
+
+                    margin-bottom: 20px;
+
+                    label {
+                        top: 22px;
+                    }
+
+                    textarea {
+                        min-height: 140px;
+                    }
+                }
+
+
+            }
+
+            button {
+                color: variables.$white;
+                display: block;
+                border-radius: 12px;
+                text-align: center;
+                padding: 16px;
+                font-size: 16px;
+                font-family: variables.$primary-font;
+                font-weight: 700;
+                width: 100%;
+            }
+        }
+
     }
 
 }

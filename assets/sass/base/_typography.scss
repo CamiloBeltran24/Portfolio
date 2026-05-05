@@ -1,6 +1,7 @@
 @use "../abstracts/variables";
 
-h1 {
+h1,
+.title {
     font-size: 36px;
     color: variables.$white;
     font-family: variables.$primary-font;
@@ -27,10 +28,11 @@ p {
 }
 
 .title {
-    font-size: 32px;
+    font-size: 36px;
     color: variables.$white;
     font-weight: 700;
     margin-bottom: 12px;
+    padding-right: 25%;
 }
 
 .subtitle {
