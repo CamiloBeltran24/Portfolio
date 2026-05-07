@@ -44,7 +44,7 @@ a {
 
 .btn {
     border-radius: 8px;
-    padding: 12px 24px;
+    padding: 12px 22px;
     color: variables.$white;
     background-color: transparent;
     border: 1px solid variables.$quaternary-color;
@@ -61,8 +61,10 @@ a {
 button {
     background-color: variables.$primary-color;
     border: 1px solid variables.$primary-color;
-    padding: 12px 46px 12px 24px;
+    padding: 12px 40px 12px 24px;
     filter: drop-shadow(0px 0px 20px rgba(variables.$primary-color, 0.3));
+    position: relative;
+    transition: all 0.3s ease-in-out;
 
 
 
@@ -76,7 +78,7 @@ button {
         background-size: contain;
         background-position: center;
         position: absolute;
-        right: 24px;
+        right: 20px;
         top: 53%;
         transform: translateY(-50%);
     }

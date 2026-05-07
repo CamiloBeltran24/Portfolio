@@ -40,7 +40,7 @@ a {
 
 .btn {
   border-radius: 8px;
-  padding: 12px 24px;
+  padding: 12px 22px;
   color: #ffffff;
   background-color: transparent;
   border: 1px solid #283139;
@@ -56,8 +56,10 @@ a {
 button {
   background-color: #1E8DF6;
   border: 1px solid #1E8DF6;
-  padding: 12px 46px 12px 24px;
+  padding: 12px 40px 12px 24px;
   filter: drop-shadow(0px 0px 20px rgba(30, 141, 246, 0.3));
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .btn-primary::after,
 button::after {
@@ -70,7 +72,7 @@ button::after {
   background-size: contain;
   background-position: center;
   position: absolute;
-  right: 24px;
+  right: 20px;
   top: 53%;
   transform: translateY(-50%);
 }
@@ -98,10 +100,18 @@ h1,
   font-weight: 900;
   margin: 16px 0;
   line-height: 1.2;
+  padding-right: 10%;
+  letter-spacing: 0.6px;
 }
 h1 span,
 .title span {
   color: #1E8DF6;
+}
+@media screen and (min-width: 768px) {
+  h1,
+  .title {
+    padding-right: 40%;
+  }
 }
 
 p,
@@ -118,11 +128,16 @@ p {
 }
 
 .title {
-  font-size: 36px;
+  font-size: 32px;
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 12px;
   padding-right: 25%;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
 }
 
 .subtitle {
@@ -207,6 +222,7 @@ p {
 }
 .header__menu {
   max-width: 22px;
+  cursor: pointer;
 }
 .header__menu figure {
   width: 100%;
@@ -217,6 +233,7 @@ footer {
   text-align: center;
   padding: 32px 0;
   border-top: 1px solid #283139;
+  margin-top: 48px;
 }
 footer .social-links {
   display: flex;
@@ -346,9 +363,29 @@ footer .rights p {
 .intro__skills span.experience::after {
   background-image: url("../IMG/svg/time.svg");
 }
+@media screen and (min-width: 1025px) {
+  .intro h1 {
+    font-size: 72px;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .intro .container .intro__img,
+  .intro .container .intro__info {
+    max-width: 50%;
+    flex: 1;
+  }
+}
 
 .section {
   padding: 48px 0 0;
+}
+.section.projects .title {
+  padding-right: 0;
+  text-align: center;
+}
+.section.projects .title + p {
+  text-align: center;
 }
 .section .projects__cards {
   display: grid;
@@ -494,8 +531,7 @@ footer .rights p {
 }
 @media screen and (min-width: 768px) {
   .section.experience .timeline {
-    max-width: 80%;
-    margin-inline: auto;
+    margin-left: 0;
   }
 }
 .section.experience .timeline .timeline__item {
@@ -550,6 +586,12 @@ footer .rights p {
 .section.certifications .title {
   margin-bottom: 24px;
 }
+.section.certifications .certificates__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+  column-gap: 32px;
+}
 .section.certifications .certificate {
   padding: 25px;
   position: relative;
@@ -561,6 +603,8 @@ footer .rights p {
   padding-right: 25%;
   line-height: 1.5;
   margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
 }
 .section.certifications .certificate__date {
   position: absolute;
@@ -576,6 +620,8 @@ footer .rights p {
 .section.certifications .certificate__company {
   display: block;
   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
 }
 .section.certifications .certificate__description {
   font-size: 14px;
@@ -602,8 +648,17 @@ footer .rights p {
 .section.contact .title {
   padding-right: 25%;
 }
+@media screen and (min-width: 768px) {
+  .section.contact .title {
+    font-size: 48px;
+    margin-top: 0;
+  }
+}
 .section.contact .contact__buttons {
   margin: 32px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 32px;
 }
 .section.contact .contact__btn {
   display: block;
@@ -644,7 +699,12 @@ footer .rights p {
 .section.contact form {
   padding: 24px 24px 40px;
   border-radius: 24px;
-  border: 2px solid #283139;
+  border: 5px solid #283139;
+}
+@media screen and (min-width: 1025px) {
+  .section.contact form {
+    padding: 40px;
+  }
 }
 .section.contact form .title {
   font-size: 20px;
@@ -657,6 +717,11 @@ footer .rights p {
   position: relative;
   border: none;
   margin: 16px 0;
+}
+@media screen and (min-width: 1025px) {
+  .section.contact form fieldset {
+    margin: 20px 0;
+  }
 }
 .section.contact form fieldset label {
   color: rgba(156, 171, 186, 0.5);
@@ -703,6 +768,15 @@ footer .rights p {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  .group {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

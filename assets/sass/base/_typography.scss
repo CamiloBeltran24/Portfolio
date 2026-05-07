@@ -8,9 +8,15 @@ h1,
     font-weight: 900;
     margin: 16px 0;
     line-height: 1.2;
+    padding-right: 10%;
+    letter-spacing: 0.6px;
 
     span {
         color: variables.$primary-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-right: 40%;
     }
 }
 
@@ -28,11 +34,15 @@ p {
 }
 
 .title {
-    font-size: 36px;
+    font-size: 32px;
     color: variables.$white;
     font-weight: 700;
     margin-bottom: 12px;
     padding-right: 25%;
+
+    @media screen and (min-width: 768px) {
+        font-size: 30px;
+    }
 }
 
 .subtitle {

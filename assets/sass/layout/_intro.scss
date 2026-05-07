@@ -116,4 +116,22 @@
             }
         }
     }
+
+    h1 {
+        @media screen and (min-width: 1025px) {
+            font-size: 72px;
+            padding-right: 0;
+        }
+    }
+
+    @media screen and (min-width: 1025px) {
+        .container {
+
+            .intro__img,
+            .intro__info {
+                max-width: 50%;
+                flex: 1;
+            }
+        }
+    }
 }
