@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/IMG/logo_christian.ico">
     <title>Christian Camilo Beltrán Fonseca - Portfolio</title>
 
 
@@ -27,9 +28,18 @@
             </div>
             <nav class="header__nav">
                 <ul>
-                    <li><a href="#" class="projects" aria-label="Go to Projects section">Projects</a></li>
-                    <li><a href="#" class="experience" aria-label="Go to Experience section">Experience</a></li>
-                    <li><a href="#" class="contact" aria-label="Go to Contact section">Contact</a></li>
+                    <li>
+                        <a href="#projects" class="projects header__nav--item"
+                            aria-label="Go to Projects section">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#experience" class="experience header__nav--item"
+                            aria-label="Go to Experience section">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="contact header__nav--item"
+                            aria-label="Go to Contact section">Contact</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -72,7 +82,8 @@
                 </div>
 
                 <figure class="intro__img">
-                    <img src="./assets/IMG/main_setup.png" alt="" loading="lazy" decoding="async">
+                    <img src="./assets/IMG/Gemini_Generated_Image_ji0bg1ji0bg1ji0b.png" alt="" loading="lazy"
+                        decoding="async">
                 </figure>
 
 
@@ -218,7 +229,7 @@
 
         <div class="group container">
             <section id="experience" class="section experience">
-                <div class="container">
+                <div class="">
                     <h2 class="title">Experience</h2>
                     <div class="timeline">
                         <article class="timeline__item current">
@@ -263,7 +274,7 @@
 
 
             <section id="certifications" class="section certifications">
-                <div class="container">
+                <div class="">
                     <h2 class="title">Certifications & Courses</h2>
                     <div class="certificates__grid">
                         <article class="certificate">
@@ -323,25 +334,29 @@
                 </div>
 
 
-                <form action="" method="POST" class="contact__form">
+                <form action="https://formspree.io/f/xnqwlzpw" method="POST" class="contact__form" id="contact-form">
                     <h2 class="title">Send a message</h2>
                     <p>I'll get back to you as soon as possible. Usually within 24 hours.</p>
 
                     <fieldset>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
                         <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Name">
                     </fieldset>
 
                     <fieldset>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Email">
                     </fieldset>
                     <fieldset>
+                        <textarea name="message" id="message" placeholder="Message" required></textarea>
                         <label for="message">Message</label>
-                        <textarea name="" id="message" placeholder="Message"></textarea>
                     </fieldset>
-                    <button type="submit">Send Message</button>
+                    <button type="submit" id="submit-button">Send Message</button>
                 </form>
+
+                <div id="response-message" style="display: none; color: green;">
+                    Thank you for your message! I will get back to you as soon as possible.
+                </div>
             </div>
         </section>
 
@@ -350,12 +365,16 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><img src="./assets/IMG/svg/github.svg" alt=""></a>
-                <a href="#" class="social-link"><img src="./assets/IMG/svg/linkedin.svg" alt=""></a>
+                <a href="https://github.com/CamiloBeltran24" class="social-link" target="_blank"><img
+                        src="./assets/IMG/svg/github.svg" alt="github icon"></a>
+                <a href="https://www.linkedin.com/in/camilobeltran24/" class="social-link" target="_blank"><img
+                        src="./assets/IMG/svg/linkedin.svg" alt="icon"></a>
                 <!-- <a href="#" class="social-link"><img src="./assets/IMG/svg/telegram.svg" alt=""></a> -->
-                <a href="#" class="social-link"><img src="./assets/IMG/svg/whatsapp_alt.svg" alt=""></a>
+                <a href="https://wa.me/573133805123?text=Hola%20Christian,%20vi%20tu%20portafolio%20y%20quiero%20contactarte"
+                    class="social-link" target="_blank"><img src="./assets/IMG/svg/whatsapp_alt.svg"
+                        alt="Whatsapp Icon"></a>
                 <a href="mailto:cambelf.dev@gmail.com" class="social-link"><img src="./assets/IMG/svg/mail.svg"
-                        alt=""></a>
+                        alt="Mail Icon"></a>
             </div>
         </div>
 

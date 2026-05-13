@@ -44,6 +44,8 @@
         border-radius: 16px;
         overflow: hidden;
         position: relative;
+        // display: none;
+        // max-width: 400px;
 
         &::before {
             content: '';
@@ -119,18 +121,31 @@
 
     h1 {
         @media screen and (min-width: 1025px) {
-            font-size: 72px;
+            font-size: 70px;
             padding-right: 0;
+            line-height: 1;
         }
     }
 
     @media screen and (min-width: 1025px) {
         .container {
 
+            justify-content: space-between;
+
             .intro__img,
             .intro__info {
-                max-width: 50%;
+                width: 50%;
                 flex: 1;
+                // max-width: 50%;
+            }
+
+            .intro__info {
+                max-width: 50%;
+            }
+
+            .intro__img {
+                max-width: 400px;
+                display: block;
             }
         }
     }

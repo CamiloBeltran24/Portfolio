@@ -168,13 +168,14 @@
             margin-top: 32px;
             display: grid;
             gap: 32px;
+            padding: 0 10px;
             // border-left: 1px solid variables.$quaternary-color;
 
             &::before {
                 content: '';
                 position: absolute;
                 top: 3px;
-                left: 0px;
+                left: 5px;
                 width: 2px;
                 height: 100%;
                 background-color: variables.$quaternary-color;
@@ -193,7 +194,7 @@
                     content: '';
                     position: absolute;
                     top: 3px;
-                    left: -8px;
+                    left: -13px;
                     width: 14px;
                     height: 14px;
                     border-radius: 50%;
@@ -404,6 +405,10 @@
                 padding: 40px;
             }
 
+            p {
+                margin-bottom: 20px;
+            }
+
             .title {
                 font-size: 20px;
                 font-weight: 700;
@@ -415,7 +420,7 @@
                 display: block;
                 position: relative;
                 border: none;
-                margin: 16px 0;
+                margin: 20px 0;
 
                 @media screen and (min-width: 1025px) {
                     margin: 20px 0;
@@ -423,13 +428,14 @@
 
                 label {
                     color: rgba(variables.$text-color, 0.5);
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 700;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
                     left: 16px;
                     text-transform: uppercase;
+                    transition: all 0.3s ease-in-out;
                 }
 
                 input,
@@ -442,10 +448,20 @@
                     border-radius: 12px;
                     appearance: none;
                     -webkit-appearance: none;
+                    color: variables.$text-color;
                     -moz-appearance: none;
 
                     &::placeholder {
                         opacity: 0;
+                    }
+
+
+                    &.focus {
+                        &+label {
+                            top: -8px;
+                            left: 5px;
+                            font-size: 11px;
+                        }
                     }
                 }
 

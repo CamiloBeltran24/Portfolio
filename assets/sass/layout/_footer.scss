@@ -29,6 +29,15 @@ footer {
                 object-fit: contain;
             }
         }
+
+        .social-link {
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                border-color: rgba(variables.$primary-color, 0.5);
+                transform: scale(1.1);
+            }
+        }
     }
 
 
